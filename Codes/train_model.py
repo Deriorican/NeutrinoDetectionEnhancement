@@ -16,8 +16,8 @@ unbalanced_bdt_model = HistGradientBoostingClassifier(loss='log_loss', max_iter=
 balanced_bdt_model = HistGradientBoostingClassifier(loss='log_loss', max_iter=250, max_leaf_nodes=31, l2_regularization=0.1, max_bins=255 , validation_fraction=0.1, n_iter_no_change=10, tol=1e-07, class_weight="balanced")
 
 
-#initiateTraining(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder,"mlp", mlp_model)
-#initiateTraining(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder,"knn", knn_model)
-#initiateTraining(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder,"svm_unbalanced", svm_model, discard=0.95, n_splits=10)
-initiateTraining(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder,"unbalanced_bdt", unbalanced_bdt_model, discard=0, n_splits=10)
-initiateTraining(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder,"balanced_bdt", balanced_bdt_model, discard=0, n_splits=10)
+#initiateTraining(muon_folder, neutrino_folder, livetimes_file, save_folder,"mlp", mlp_model)
+#initiateTraining(muon_folder, neutrino_folder, livetimes_file, save_folder,"knn", knn_model)
+#initiateTraining(muon_folder, neutrino_folder, livetimes_file, save_folder,"svm_unbalanced", svm_model, discard=0.95, n_splits=10)
+initiateTraining(muon_folder, neutrino_folder, livetimes_file, save_folder,"unbalanced_bdt", unbalanced_bdt_model, discard=0, n_splits=10)
+initiateTraining(muon_folder, neutrino_folder, livetimes_file, save_folder,"balanced_bdt", balanced_bdt_model, discard=0, n_splits=10)

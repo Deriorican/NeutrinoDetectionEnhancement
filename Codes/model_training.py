@@ -57,7 +57,7 @@ def readPKL(file):
 
 
 
-def getData(muon_folder, data_folder, neutrino_folder, livetimes_file):
+def getData(muon_folder, neutrino_folder, livetimes_file):
     dataframes = []
     livetimes = pd.read_csv(livetimes_file)
     for filename in listdir(muon_folder):
@@ -123,11 +123,11 @@ def prepareData(X_raw, train_index, test_index):
 
 
 
-def initiateTraining(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder, run_name, model, discard=0.0, n_splits=10, computeScore=False):
+def initiateTraining(muon_folder, neutrino_folder, livetimes_file, save_folder, run_name, model, discard=0.0, n_splits=10, computeScore=False):
 
     print("building dataframe...")
 
-    X_raw = getData(muon_folder, data_folder, neutrino_folder, livetimes_file)
+    X_raw = getData(muon_folder, neutrino_folder, livetimes_file)
     
     print("\ndataframe built...\n")
 

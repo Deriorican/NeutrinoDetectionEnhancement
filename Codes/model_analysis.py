@@ -30,9 +30,9 @@ def computeScores(Y_predicted, Y_true):
 
 
 
-def analyseModel(muon_folder, data_folder, neutrino_folder, livetimes_file, save_folder, plot_folder, run_name, keep=1.0, save_name=None, nbins=100):
+def analyseModel(muon_folder, neutrino_folder, livetimes_file, save_folder, plot_folder, run_name, keep=1.0, save_name=None, nbins=100):
     models, train_indices, test_indices = loadModelResults(save_folder, run_name)
-    X_raw = getData(muon_folder, data_folder, neutrino_folder, livetimes_file)
+    X_raw = getData(muon_folder, neutrino_folder, livetimes_file)
     for i in range(len(models)):
         print("===================================================================")
         print(f"Fold {i}:")
